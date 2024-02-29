@@ -75,9 +75,16 @@ func SqlTimePtr(t *time.Time) sql.NullTime {
 	}
 }
 
-func SqlNullFloat64(f float64) sql.NullFloat64 {
+func SqlFloat64(f float64) sql.NullFloat64 {
 	return sql.NullFloat64{
 		Float64: f,
 		Valid:   true,
+	}
+}
+
+func SqlBool(b bool) sql.NullBool {
+	return sql.NullBool{
+		Bool:  b,
+		Valid: true,
 	}
 }
